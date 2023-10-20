@@ -5,7 +5,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node interact.js"
+    "get-users": "node get-whitelisted-users.js",
+    "get-arbitrum": "node arbitrum.js",
+    "get-optimism": "node optimism.js"
   },
   "keywords": [],
   "author": "",
