@@ -7,13 +7,14 @@
   "scripts": {
     "get-users": "node get-whitelisted-users.js",
     "get-arbitrum": "node arbitrum.js",
-    "get-optimism": "node optimism.js"
+    "get-optimism": "node optimism.js",
+    "get-requests": "node get-requests.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "dotenv": "^16.3.1",
-    "ethers": "^6.8.0"
+    "ethers": "^5.7.0"
   }
 }
