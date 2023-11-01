@@ -15,6 +15,8 @@ async function main() {
   const contractAddress = testnetsContractAddress[networkName].generator;
 
   const provider = new ethers.providers.JsonRpcProvider(PROVIDERS_MAP[networkName].url);
+  // const currentBlockNumber = await provider.getBlockNumber();
+  // console.log(currentBlockNumber)
   const signer = new ethers.Wallet(privateKey, provider);
 
   // const contractInterface = new ethers.utils(contractAddress, contractAbi.abi, signer);
@@ -22,9 +24,11 @@ async function main() {
   // const requestGeneratedEvent = contractInterface.encodeEventLog('RequestGenerated', [null, null, contractAddress, null, null, null, null, null]);
 
   const contract = new ethers.Contract(contractAddress, contractAbi.abi, signer);
-  const requestGeneratedEvent = await contract.queryFilter('RequestGenerated', 49651304, 999999999);
-
+  // const requestGeneratedEvent = await contract.queryFilter('RequestGenerated', 49651304, 999999999);
+  const requestGeneratedEvent = await contract.queryFilter('RequestGenerated', 52103602);
   console.log(requestGeneratedEvent)
+  // console.log(requestGeneratedEvent.args['nonce'])
+  console.log(BigNumber.from(requestGeneratedEvent[requestGeneratedEvent.length - 1].args['nonce']).toNumber())
 } 
 
 main()
