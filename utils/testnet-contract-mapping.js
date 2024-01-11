@@ -3,9 +3,9 @@ import { PROVIDER_NAME_ARBITRUM, PROVIDER_NAME_APTOS, PROVIDER_NAME_ASTAR, PROVI
 // Testnets
 export const testnetsContractAddress = {
   [PROVIDER_NAME_ARBITRUM]: {
-    router: '0xe0c0c4b7fe7d07fcde1a4f0959006a71c0ebe787',
-    deposit: '0xd5fd8f137d718a1eb386e8c854c27612690548bb',
-    generator: '0x99ee4da3e4c88ca2c9902250eac389592f860b68'
+    router: '0x7d86fbfc0701d0bf273fd550eb65be1002ed304e',
+    deposit: '0xd44b6c04d0e13f80a124827882df05617fc1c0eb',
+    generator: '0xf6c3309007570c5c8a9dea081e3b9fcc47bf7de4'
   },
   [PROVIDER_NAME_APTOS]: {
     router: '0x36b67d62112127f2125f2f2820ccaed685242ea3f7f50bc12ab66c980da69288',
@@ -35,7 +35,9 @@ export const testnetsContractAddress = {
     router: '0xb2667190b753720188a4039dd2b6014f01e07fea',
   },
   [PROVIDER_NAME_CELO]: {
-    router: '0xb2667190b753720188a4039dd2b6014f01e07fea',
+    router: '0x6D46C098996AD584c9C40D6b4771680f54cE3726',
+    generator: '0x99a021029EBC90020B193e111Ae2726264a111A2',
+    deposit: '0x1697F96d52DFB51CcC96856680DA885c8AdAe429'
   },
   [PROVIDER_NAME_CRONOS]: {
     router: '0x45dD6AB76De3c326d8296299C849791897FCffc2',

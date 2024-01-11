@@ -38,7 +38,7 @@ export const PROVIDERS_MAP = {
       gasLimit: 9500000,
   },
   [PROVIDER_NAME_ARBITRUM]: {
-      url: 'http://34.131.238.44:8547',
+      url: 'http://34.27.231.152:8547',
       chainId: 421613,
       gasLimit: 9500000,
   },

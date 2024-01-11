@@ -1,11 +1,11 @@
 import ethers from 'ethers';
 
-import contractAbi from './DepositContract.json' assert {
+import contractAbi from '../DepositContract.json' assert {
   type: 'json',
   integrity: 'sha384-ABC123'
 };
-import { testnetsContractAddress } from './utils/testnet-contract-mapping';
-import { PROVIDER_NAME_ARBITRUM, PROVIDER_NAME_OPTIMISM, PROVIDER_NAME_POLYGON, PROVIDER_NAME_AVAX, PROVIDER_NAME_KLAYTN, PROVIDER_NAME_MANTLE, PROVIDER_NAME_BNB, PROVIDER_NAME_BASE, PROVIDER_NAME_ETH, PROVIDERS_MAP } from './utils/providers-mapping.js'
+import { testnetsContractAddress } from '../utils/testnet-contract-mapping.js';
+import { PROVIDER_NAME_ARBITRUM, PROVIDER_NAME_OPTIMISM, PROVIDER_NAME_POLYGON, PROVIDER_NAME_AVAX, PROVIDER_NAME_KLAYTN, PROVIDER_NAME_MANTLE, PROVIDER_NAME_BNB, PROVIDER_NAME_BASE, PROVIDER_NAME_ETH, PROVIDERS_MAP } from '../utils/providers-mapping.js'
 import 'dotenv/config'
 
 const privateKey = process.env.PRIVATE_KEY;
