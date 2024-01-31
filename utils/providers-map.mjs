@@ -185,6 +185,26 @@ export const PROVIDERS_MAP = {
         chainId: 123,
         gasLimit: 9500000,
       },
+      holesky: {
+        url: 'https://ethereum-holesky.publicnode.com	',
+        chainId: 17000,
+        gasLimit: 9500000,
+      },
+      immutable_zk_evm: {
+        url: 'https://rpc.testnet.immutable.com',
+        chainId: 13473,
+        gasLimit: 9500000,
+      },
+      blast_sepolia: {
+        url: 'https://sepolia.blast.io',
+        chainId: 168587773,
+        gasLimit: 9500000,
+      },
+      kroma: {
+        url: 'https://api.sepolia.kroma.network',
+        chainId: 2358,
+        gasLimit: 9500000,
+      },
     },
     mainnet: {
       ethereum: {
@@ -243,7 +263,7 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       optimism: {
-        url: 'http://13.55.212.2:9993',
+        url: 'http://34.116.73.128:9993/',
         chainId: 10,
         gasLimit: 9500000,
       },

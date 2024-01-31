@@ -22,7 +22,7 @@ async function main() {
     let startingBlock = 15940001;
     const blocksInterval = 10000;
     let endBlock = -1;
-    // const requests = [];
+    const requests = [];
     while(endBlock < currentBlockNumber) {
         endBlock = startingBlock + blocksInterval < currentBlockNumber ? startingBlock == 0 ? startingBlock + blocksInterval:startingBlock - 1 + blocksInterval : currentBlockNumber;
         console.log(startingBlock, endBlock)
@@ -30,17 +30,18 @@ async function main() {
 
         if (newRequests && newRequests.length > 0) {
             const [request] = newRequests;
-            // const transactionReceipt = await request.getTransactionReceipt();
+            const transactionReceipt = await request.getTransactionReceipt();
+            console.log(transactionReceipt)
             const transactionBlock = await request.getBlock()
             console.log(formatISO(transactionBlock.timestamp * 1000))
-            // requests.push(newRequests);
+            requests.push(newRequests);
             console.log(newRequests.length)
         }
         startingBlock += startingBlock == 0 ? blocksInterval + 1 : blocksInterval;
     }
-    // console.log(requests.length, requests)
-    // console.log(requests[0][0].args)
-    // console.log(BigNumber.from(requests[0][requests[0].length - 1].args['nonce']).toNumber())
+    console.log(requests.length, requests)
+    console.log(requests[0])
+    // console.log(BigNumber.from(requests[e][requests[0].length - 1].args['nonce']).toNumber())
 }
 
 main()

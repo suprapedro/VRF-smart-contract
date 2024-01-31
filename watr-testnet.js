@@ -19,7 +19,7 @@ async function main() {
     if(!currentBlockNumber) {
         throw new Error(`Current block number is not found`);
     }
-    let startingBlock = 2725001;
+    let startingBlock = 2726377;
     const blocksInterval = 1000;
     let endBlock = -1;
     // const requests = [];

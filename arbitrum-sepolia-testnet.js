@@ -13,16 +13,16 @@ async function main() {
         router: '0xF8B0eF4e20feD60eB3485a2Dc95C3BBdAa1D24df',
         rng: ''
     }
-    const providerClient = await new EVM({ privateKey, networkName: 'arbitrum_goerli', networkType: 'testnet', contracts });
+    const providerClient = await new EVM({ privateKey, networkName: 'arbitrum_sepolia', networkType: 'testnet', contracts });
     const currentBlockNumber = await providerClient.getCurrentBlockNumber();
     console.log(currentBlockNumber)
     if(!currentBlockNumber) {
         throw new Error(`Current block number is not found`);
     }
-    let startingBlock = 31500001;
+    let startingBlock = 60935000;
     const blocksInterval = 10000;
     let endBlock = -1;
-    // const requests = [];
+    const requests = [];
     while(endBlock < currentBlockNumber) {
         endBlock = startingBlock + blocksInterval < currentBlockNumber ? startingBlock - 1 + blocksInterval : currentBlockNumber;
         console.log(startingBlock, endBlock)
@@ -33,13 +33,13 @@ async function main() {
             // const transactionReceipt = await request.getTransactionReceipt();
             const transactionBlock = await request.getBlock()
             console.log(formatISO(transactionBlock.timestamp * 1000))
-            // requests.push(newRequests);
+            requests.push(newRequests);
             console.log(newRequests.length)
         }
         startingBlock += blocksInterval;
     }
     console.log(requests.length, requests)
-    console.log(requests[0][0].args)
+    console.log(requests[0])
     console.log(BigNumber.from(requests[0][requests[0].length - 1].args['nonce']).toNumber())
 }
 
