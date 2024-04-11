@@ -1,22 +1,25 @@
 export const PROVIDERS_MAP = {
     testnet: {
+      aptos: {
+        url: 'http://34.175.232.30:8080/v1',
+      },
       arbitrum_goerli: {
-        url: 'http://34.131.238.44:8547',
+        url: 'https://goerli-rollup.arbitrum.io/rpc',
         chainId: 421613,
         gasLimit: 9500000,
       },
       arbitrum_sepolia: {
-        url: 'http://65.0.178.125:8547',
+        url: 'http://34.162.48.4:8547',
         chainId: 421614,
         gasLimit: 9500000,
       },
       base_goerli: {
-        url: 'http://65.1.109.108:8545',
+        url: 'https://1rpc.io/base-goerli', //not working
         chainId: 84531,
         gasLimit: 9500000,
       },
       base_sepolia: {
-        url: 'http://52.66.210.191:8545',
+        url: 'http://35.194.144.102:8545',
         chainId: 84532,
         gasLimit: 9500000,
       },
@@ -31,17 +34,17 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       dfk: {
-        url: 'http://34.152.39.240:9650/ext/bc/32sexHqc3tBQsik8h7WP5F2ruL5svqhX5opeTgXCRVX8HpbKF/rpc',
+        url: 'http://35.234.249.221:9650',
         chainId: 335,
         gasLimit: 9500000,
       },
       doge: {
-        url: 'http://34.16.141.237:8545',
+        url: 'http://34.125.218.73:8545',
         chainId: 568,
         gasLimit: 9500000,
       },
       ethereum_sepolia: {
-        url: 'http://3.111.23.132:8545',
+        url: 'http://104.199.175.30:8545',
         chainId: 5,
         gasLimit: 9500000,
       },
@@ -51,12 +54,12 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       linea: {
-        url: 'http://13.124.96.234:8545',
+        url: 'http://34.125.227.246:8545',
         chainId: 0,
         gasLimit: 9500000,
       },
       mantle: {
-        url: 'https://rpc.testnet.mantle.xyz',
+        url: 'http://34.106.100.245:8545',
         chainId: 5001,
         gasLimit: 9500000,
       },
@@ -66,12 +69,12 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       optimism_sepolia: {
-        url: 'http://65.2.187.29:8545',
+        url: 'http://104.199.165.210:8545',
         chainId: 0,
         gasLimit: 9500000,
       },
       matic: {
-        url: 'http://34.29.204.22:8545/',
+        url: 'http://34.29.204.22:8545',
         chainId: 80001,
         gasLimit: 9500000,
       },
@@ -96,17 +99,17 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       fx: {
-        url: 'http://34.131.154.60:1317',
+        url: 'http://13.124.224.132:8545',
         chainId: 90001,
         gasLimit: 9500000,
       },
       astar: {
-        url: 'http://34.162.173.188:9944/',
+        url: 'http://34.162.173.188:9944',
         chainId: 81,
         gasLimit: 9500000,
       },
       evmos: {
-        url: 'http://52.78.115.239:8545',
+        url: 'http://34.106.11.186:8545',
         chainId: 9000,
         gasLimit: 9500000,
       },
@@ -141,12 +144,12 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       tomochain: {
-        url: 'https://rpc.testnet.tomochain.com',
+        url: 'https://rpc.testnet.tomochain.com', // not working
         chainId: 89,
         gasLimit: 9500000,
       },
       iotex: {
-        url: 'https://babel-api.testnet.iotex.io',
+        url: 'http://35.194.26.171:15014',
         chainId: 4690,
         gasLimit: 9500000,
       },
@@ -166,7 +169,7 @@ export const PROVIDERS_MAP = {
         gasLimit: 8000000,
       },
       polygon: {
-        url: 'http://34.29.204.22:8545/',
+        url: 'http://34.29.204.22:8545',
         chainId: 80001,
         gasLimit: 9500000,
       },
@@ -181,7 +184,7 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       fuse: {
-        url: 'https://rpc.fusespark.io',
+        url: 'http:// 34.163.168.223:8545',
         chainId: 123,
         gasLimit: 9500000,
       },
@@ -213,7 +216,7 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       arbitrum: {
-        url: 'http://34.27.231.152:8547',
+        url: 'http://35.221.132.189:8547',
         chainId: 42161,
         gasLimit: 9500000,
       },
@@ -233,7 +236,7 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       polygon: {
-        url: 'http://3.13.182.102:8545',
+        url: 'http://34.17.38.136:8545',
         chainId: 137,
         gasLimit: 9500000,
       },
@@ -243,7 +246,7 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       bnb: {
-        url: 'http://35.154.249.166:8545',
+        url: 'http://34.93.39.149:8545',
         chainId: 56,
         gasLimit: 9500000,
       },
@@ -253,37 +256,37 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       base: {
-        url: 'http://13.125.33.101:8545',
+        url: 'http://34.154.107.231:8545',
         chainId: 8453,
         gasLimit: 9500000,
       },
       mantle: {
-        url: 'http://13.124.200.105:8545',
+        url: 'http://34.116.172.78:8545',
         chainId: 5000,
         gasLimit: 9500000,
       },
       optimism: {
-        url: 'http://34.116.73.128:9993/',
+        url: 'http://34.100.200.152:8545',
         chainId: 10,
         gasLimit: 9500000,
       },
       linea: {
-        url: 'http://54.253.245.57:8545',
+        url: 'http://34.125.81.34:8545',
         chainId: 59144,
         gasLimit: 9500000,
       },
-      // aptos: {
-      //   url: 'http://52.65.77.65:8080/v1',
-      //   chainId: 1,
-      //   gasLimit: 9500000,
-      // },
+      aptos: {
+        url: 'http://34.78.78.36:8080/v1',
+        chainId: 1,
+        gasLimit: 9500000,
+      },
       cronos: {
-        url: 'http://3.18.96.233:8545',
+        url: 'http://34.32.12.11:8545',
         chainId: 25,
         gasLimit: 9500000,
       },
       syscoin_rollux: {
-        url: 'http://13.232.133.74:9545',
+        url: 'http://35.221.173.160:9545',
         chainId: 570,
         gasLimit: 9500000,
       },
@@ -293,9 +296,24 @@ export const PROVIDERS_MAP = {
         gasLimit: 9500000,
       },
       fuse: {
-        url: 'http://43.200.249.251:8545',
+        url: 'http://34.65.140.86:8545',
         chainId: 122,
         gasLimit: 9500000,
       },
+      kroma: {
+        url: 'http://34.92.233.196:8545',
+        chainId: 255,
+        gasLimit: 9500000,
+      },
+      blast: {
+        url: 'http://34.81.197.102:9545',
+        chainId: 238,
+        gasLimit: 9500000,
+      },
+      xdc: {
+        url: 'http://35.229.179.73:8989',
+        chainId: 50,
+        gasLimit: 9500000,
+      }
     }
   }
